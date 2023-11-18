@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 // local font
 const headingFont = localFont({
-  src: "../../public/fonts/font.woff2",
+  src: "../public/fonts/font.woff2",
 });
 
 export const Logo = () => {
