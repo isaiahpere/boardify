@@ -1,0 +1,18 @@
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// To add model or modify model in DB, you need to run npx prisma generate
+
+// to push model to planetScale you need to run npx prisma db push
+
+model Board {
+  id String @id @default(uuid())
+  title String
+}
