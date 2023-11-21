@@ -1,3 +1,7 @@
+// RESET DB - npx prisma migrate reset 
+// DB PUSH - npx prisma db push
+// DB GENERATE - npx prisma generate
+
 datasource db {
   provider     = "mysql"
   url          = env("DATABASE_URL")
@@ -13,6 +17,14 @@ generator client {
 // to push model to planetScale you need to run npx prisma db push
 
 model Board {
-  id String @id @default(uuid())
-  title String
+  id              String @id @default(uuid())
+  orgId           String
+  title           String
+  imageId         String
+  imageThumbUrl   String @db.Text
+  imageFullUrl    String @db.Text
+  imageUserName   String @db.Text
+  imageLinkHTML   String @db.Text
+  createAt        DateTime @default(now())
+  updatedAt       DateTime @updatedAt
 }

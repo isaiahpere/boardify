@@ -80,7 +80,7 @@ export const FormPicker = ({ id, errors }: FormPickerProps) => {
               className="hidden"
               checked={selectedImageId === image.id}
               disabled={pending}
-              value={`${image.id}|${image.urls.thumb}|${image.urls.full}|${image.links.html}|${image.user.name}}`}
+              value={`${image.id}|${image.urls.thumb}|${image.urls.full}|${image.links.html}|${image.user.name}`}
               onChange={() => {}}
             />
             <Image
